@@ -1,0 +1,158 @@
+html {
+  background: #018ded url(https://unsplash.it/1500/1000?image=557&blur=6);
+  background-size: cover;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 40%;
+  height: 6px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  /* transition: all 0.05s; */
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ROTATE DIV */
+.number1 {
+  --rotation: 30deg;
+}
+.number2 {
+  --rotation: 60deg;
+}
+.number3 {
+  --rotation: 90deg;
+}
+.number4 {
+  --rotation: 120deg;
+}
+.number5 {
+  --rotation: 150deg;
+}
+.number6 {
+  --rotation: 180deg;
+}
+.number7 {
+  --rotation: 210deg;
+}
+.number8 {
+  --rotation: 240deg;
+}
+.number9 {
+  --rotation: 270deg;
+}
+.number10 {
+  --rotation: 300deg;
+}
+.number11 {
+  --rotation: 330deg;
+}
+/* ROTATE CONTENT */
+.number1 .rotate1 {
+  display: inline-block;
+  transform: rotate(-30deg);
+}
+.number2 .rotate2 {
+  display: inline-block;
+  transform: rotate(-60deg);
+}
+.number3 .rotate3 {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+.number4 .rotate4 {
+  display: inline-block;
+  transform: rotate(-120deg);
+}
+.number5 .rotate5 {
+  display: inline-block;
+  transform: rotate(-150deg);
+}
+.number6 .rotate6 {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+.number7 .rotate7 {
+  display: inline-block;
+  transform: rotate(-210deg);
+}
+.number8 .rotate8 {
+  display: inline-block;
+  transform: rotate(-240deg);
+}
+.number9 .rotate9 {
+  display: inline-block;
+  transform: rotate(-270deg);
+}
+.number10 .rotate10 {
+  display: inline-block;
+  transform: rotate(-300deg);
+}
+.number11 .rotate11 {
+  display: inline-block;
+  transform: rotate(-330deg);
+}
+
+.clock .second-hand {
+  z-index: 1;
+  width: 50%;
+  height: 3px;
+  transform-origin: 100%;
+  background-color: red;
+}
+.clock .min-hand {
+  z-index: 1;
+  width: 50%;
+  height: 5px;
+  transform-origin: 100%;
+  background-color: black;
+}
+.clock .hour-hand {
+  width: 35%;
+  height: 5px;
+  transform-origin: 100%;
+  background-color: black;
+}
